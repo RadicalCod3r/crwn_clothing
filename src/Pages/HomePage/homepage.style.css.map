@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAC;EACN,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,MAAM;EACvB,OAAO,EAAE,SAAS;CACrB",
+    "sources": [
+        "homepage.style.scss"
+    ],
+    "names": [],
+    "file": "homepage.style.css"
+}
