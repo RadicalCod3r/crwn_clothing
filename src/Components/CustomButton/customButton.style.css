@@ -1,0 +1,16 @@
+.custom-button {
+  color: white;
+  border: none;
+  background-color: black;
+  padding: 1rem 3rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.custom-button:hover {
+  cursor: pointer;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+}
+/*# sourceMappingURL=customButton.style.css.map */

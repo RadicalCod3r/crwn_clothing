@@ -1,0 +1,25 @@
+.custom-button {
+    color: white;
+    border: none;
+    background-color: black;
+    padding: 1rem 3rem;
+    text-align: center;
+    font-size: 1rem;
+
+    &:hover {
+        cursor: pointer;
+        color: black;
+        background-color: white;
+        border: 1px solid black;
+    }
+
+    &.google-signin {
+        background-color: #4c8bf5;
+        color: white;
+        border: none;
+
+        &:hover {
+            background-color: #357ae8;
+        }
+    }
+}

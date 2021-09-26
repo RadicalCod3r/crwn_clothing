@@ -34,4 +34,9 @@
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
+
+.header .options .option {
+  padding: 0 1rem;
+  font-size: 1.2rem;
+}
 /*# sourceMappingURL=header.style.css.map */
