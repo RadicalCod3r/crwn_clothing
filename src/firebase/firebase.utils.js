@@ -1,5 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore";
 
 const config = {
     apiKey: "AIzaSyDjQ1sUnugLaoRtaUN3QYEbfNQPnpSnVFE",
@@ -29,7 +30,6 @@ export const  signInWithGoogle = (history) => {
             // The signed-in user info.
             const user = result.user;
             // ...
-            history.push('/');
         }).catch((error) => {
             // Handle Errors here.
             const errorCode = error.code;
@@ -42,13 +42,34 @@ export const  signInWithGoogle = (history) => {
         });
 }
 
+const db = getFirestore();
+
+export const createUserProfileDocument = async (userAuth, ...additionalData) => {
+    if(!userAuth) return;
+
+    const userRef = doc(db, `users/${userAuth.uid}`);
+    const userSnap = await getDoc(userRef);
+
+    console.log(additionalData);
+
+    console.log(userSnap);
+
+    if(!userSnap.exists()) {
+        const { displayName, email } = userAuth;
+        const createdAt = new Date();
+
+        try {
+            await setDoc(userRef, {
+                displayName,
+                email,
+                createdAt,
+                ...additionalData
+            });
+        } catch(error) {
+            console.log(error.message);
+        }
+    }
+    return userRef;
+}
+
 export default auth;
-
-// export const auth = firebase.auth();
-// export const firestore = firebase.firestore();
-
-// const provider = firebase.auth.GoogleAuthProvider();
-// provider.setCustomParameters({ prompt: 'select_account' });
-// export const signInWithGoogle = () => auth.signInWithPopup(provider);
-
-// export default firebase;
