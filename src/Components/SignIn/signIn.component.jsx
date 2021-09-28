@@ -4,7 +4,6 @@ import FormInput from  '../FormInput/formInput.component';
 import CustomButton from '../CustomButton/customButton.component';
 import auth, { signInWithGoogle } from '../../firebase/firebase.utils';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { withRouter } from 'react-router-dom';
 
 class SignIn extends React.Component {
     constructor() {
@@ -30,9 +29,7 @@ class SignIn extends React.Component {
                 // Signed in 
                 const user = userCredential.user;
                 // ...
-                this.setState({ email: '', password: '' }, () => {
-                    history.push('/');
-                });
+                this.setState({ email: '', password: '' });
             })
             .catch((error) => {
                 console.log(error);
@@ -69,4 +66,4 @@ class SignIn extends React.Component {
     }
 }
 
-export default withRouter(SignIn);
+export default SignIn;
