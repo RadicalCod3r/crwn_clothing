@@ -20,16 +20,17 @@ provider.setCustomParameters({
 });
 
 const auth = getAuth();
-export const  signInWithGoogle = (history) => {
-    console.log(history);
+export const signInWithGoogle = () => {
     signInWithPopup(auth, provider)
         .then((result) => {
             // This gives you a Google Access Token. You can use it to access the Google API.
-            const credential = GoogleAuthProvider.credentialFromResult(result);
-            const token = credential.accessToken;
-            // The signed-in user info.
-            const user = result.user;
-            // ...
+            if(result) {
+                const credential = GoogleAuthProvider.credentialFromResult(result);
+                const token = credential.accessToken;
+                // The signed-in user info.
+                const user = result.user;
+                // ...
+            }
         }).catch((error) => {
             // Handle Errors here.
             const errorCode = error.code;
