@@ -22,4 +22,17 @@
             background-color: #357ae8;
         }
     }
+
+    &.inverted {
+        cursor: pointer;
+        color: black;
+        background-color: white;
+        border: 1px solid black;
+
+        &:hover {
+            color: white;
+            border: none;
+            background-color: black;
+        }
+    }
 }
