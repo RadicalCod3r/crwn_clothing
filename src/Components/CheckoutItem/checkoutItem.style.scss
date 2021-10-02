@@ -1,0 +1,28 @@
+.checkout-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left; 
+    font-size: 18px;
+    border-bottom: 1px black solid;
+
+    .item {
+        &-description, &-quantity, &-price, &-image{
+            width: 50%;
+        }
+
+        &-image {
+            padding: 1rem .5rem;
+
+            img {
+                width: 80%;
+            }
+        }
+
+        &-remove {
+            width: 8%;
+            cursor: pointer;
+        }
+    }
+}
