@@ -6,7 +6,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 22%;
+  width: 22vw;
   height: 300px;
 }
 

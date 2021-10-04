@@ -1,0 +1,16 @@
+.collection-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .title {
+        text-align: center;
+        font-size: 3rem;
+        // margin-bottom: 2rem;
+    }
+
+    .items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

@@ -4,8 +4,8 @@
     flex-direction: row;
     align-items: center;
     text-align: left; 
-    font-size: 18px;
-    border-bottom: 1px black solid;
+    font-size: 20px;
+    border-bottom: 1px #ccc solid;
 
     .item {
         &-description, &-quantity, &-price, &-image{
@@ -23,6 +23,18 @@
         &-remove {
             width: 8%;
             cursor: pointer;
+        }
+    }
+
+    .arrow {
+        cursor: pointer;
+
+        &:first-child {
+            margin-right: .2rem;
+        }
+
+        &:last-child {
+            margin-left: .2rem;
         }
     }
 }
