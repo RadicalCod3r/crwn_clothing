@@ -1,0 +1,46 @@
+.checkout-item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  font-size: 20px;
+  border-bottom: 1px #ccc solid;
+}
+
+.checkout-item .item-description, .checkout-item .item-quantity, .checkout-item .item-price, .checkout-item .item-image {
+  width: 50%;
+}
+
+.checkout-item .item-image {
+  padding: 1rem .5rem;
+}
+
+.checkout-item .item-image img {
+  width: 80%;
+}
+
+.checkout-item .item-remove {
+  width: 8%;
+  cursor: pointer;
+}
+
+.checkout-item .arrow {
+  cursor: pointer;
+}
+
+.checkout-item .arrow:first-child {
+  margin-right: .2rem;
+}
+
+.checkout-item .arrow:last-child {
+  margin-left: .2rem;
+}
+/*# sourceMappingURL=checkoutItem.style.css.map */

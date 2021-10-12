@@ -13,4 +13,27 @@
   background-color: white;
   border: 1px solid black;
 }
+
+.custom-button.google-signin {
+  background-color: #4c8bf5;
+  color: white;
+  border: none;
+}
+
+.custom-button.google-signin:hover {
+  background-color: #357ae8;
+}
+
+.custom-button.inverted {
+  cursor: pointer;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.custom-button.inverted:hover {
+  color: white;
+  border: none;
+  background-color: black;
+}
 /*# sourceMappingURL=customButton.style.css.map */

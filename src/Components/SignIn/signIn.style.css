@@ -1,5 +1,14 @@
 .sign-in {
   text-align: left;
-  width: 30vw;
+  width: 380px;
+}
+
+.sign-in .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=signIn.style.css.map */

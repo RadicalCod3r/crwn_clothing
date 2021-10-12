@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,gBAAgB,CAAC;EACb,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,KAAK,EAAE,IAAI;CAYd;;AAfD,AAKI,gBALY,CAKZ,MAAM,CAAC;EACH,UAAU,EAAE,MAAM;EAClB,SAAS,EAAE,IAAI;CAElB;;AATL,AAWI,gBAXY,CAWZ,MAAM,CAAC;EACH,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,eAAe;CACzC",
+    "sources": [
+        "collectionPage.style.scss"
+    ],
+    "names": [],
+    "file": "collectionPage.style.css"
+}
