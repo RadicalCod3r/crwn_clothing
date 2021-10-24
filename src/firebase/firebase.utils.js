@@ -15,12 +15,12 @@ const config = {
 
 const app = initializeApp(config);
 
-const provider = new GoogleAuthProvider();
+export const provider = new GoogleAuthProvider();
 provider.setCustomParameters({
     'login_hint': 'user@example.com'
 });
 
-const auth = getAuth();
+export const auth = getAuth();
 export const signInWithGoogle = () => {
     signInWithPopup(auth, provider)
         .then((result) => {
@@ -103,6 +103,15 @@ export const convertCollectionSnapshotToMap = (collectionSnapshot) => {
         previous[collection.title.toLowerCase()] = collection;
         return previous;  
     }, {});
+}
+
+export const getCurrentUser = () => {
+    return new Promise((resolve, reject) => {
+        const unsubscribe = auth.onAuthStateChanged(userAuth => {
+            unsubscribe();
+            resolve(userAuth);
+        }, reject);
+    })
 }
 
 export default auth;
