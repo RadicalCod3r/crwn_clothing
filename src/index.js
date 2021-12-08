@@ -7,6 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store, persistor } from './redux/store';
 import { PersistGate } from 'redux-persist/integration/react';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 ReactDOM.render(
   <Provider store={store}>
@@ -20,6 +21,8 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
+
+serviceWorkerRegistration.register();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

@@ -12,15 +12,23 @@ export const HeaderContainer = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100;
+    width: 100%;
     height: 70px;
     margin-bottom: 25px;
+
+    @media screen and (max-width: 800px) {
+        margin-bottom: 10px;
+    }
 `;
 
 export const LogoContainer = styled(Link)`
     hight: 100%;
     width: 70px;
     padding: 25px;
+
+    @media screen and (max-width: 800px) {
+        padding: 10px;
+    }
 `;
 
 export const OptionsContainer = styled.div`
@@ -30,6 +38,10 @@ export const OptionsContainer = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: flex-end; 
+
+    @media screen and (max-width: 800px) {
+        width: 80%;
+    }
 `;
 
 export const OptionDiv = styled.div`
